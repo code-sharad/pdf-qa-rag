@@ -43,15 +43,20 @@ export default function ChatInput({
           <button
             type="button"
             onClick={triggerFileInput}
-            className="p-3 rounded-xl hover:bg-neutral-700/50 transition-all duration-200 text-white focus:outline-none focus:ring-2 focus:ring-white/50 hover:scale-105 border border-white/20 hover:border-white/40"
+            className="p-3 rounded-xl hover:bg-neutral-700/50 transition-all duration-200 text-white focus:outline-none focus:ring-2 focus:ring-white/50 hover:scale-105 border border-white/20 hover:border-white/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             tabIndex={-1}
             aria-label="Upload PDF"
+            disabled={uploading}
           >
-            <Upload className="w-5 h-5" strokeWidth={2} />
+            {uploading ? (
+              <Loader2 className="w-5 h-5 animate-spin" strokeWidth={2} />
+            ) : (
+              <Upload className="w-5 h-5" strokeWidth={2} />
+            )}
           </button>
           {/* Upload button tooltip */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-14 opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200 bg-gray-800/90 text-white text-xs rounded-lg px-3 py-2 shadow-lg whitespace-nowrap z-50 border border-white/30 backdrop-blur-sm">
-            Upload PDF
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-14 opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200 bg-neutral-800/90 text-white text-xs rounded-lg px-3 py-2 shadow-lg whitespace-nowrap z-50 border border-white/30 backdrop-blur-sm">
+            {uploading ? "Uploading..." : "Upload PDF"}
           </div>
         </div>
 

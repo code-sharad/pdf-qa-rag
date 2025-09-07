@@ -1,5 +1,6 @@
 "use client";
 import { Bot } from "lucide-react";
+import { toast } from "sonner";
 
 interface TokenModalProps {
   showTokenModal: boolean;
@@ -46,6 +47,11 @@ export default function TokenModal({
               setApiToken(tokenDraft);
               setTokenDraft("");
               setShowTokenModal(false);
+              toast.success("Token saved", {
+                description: "Ready to upload and chat",
+                duration: 2500,
+                icon: "✅",
+              });
             }}
           >Save</button>
         </div>

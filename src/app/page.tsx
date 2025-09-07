@@ -33,11 +33,6 @@ export default function HomePage() {
     setShowStatus
   } = useChat();
 
-  // Debug: Log API token status (this prevents unused variable warning)
-  if (process.env.NODE_ENV === 'development') {
-    console.log('API Token available:', !!apiToken);
-  }
-
   return (
     <div className="min-h-screen w-full flex flex-col bg-stone-950 relative overflow-hidden">
       {/* Token Modal */}
@@ -68,24 +63,6 @@ export default function HomePage() {
         <LoadingSkeleton showSkeleton={showSkeleton} streaming={streaming} />
       </div>
 
-      {/* Error Message */}
-      {error && (
-        <div className="flex items-center justify-center mt-4">
-          <div className="rounded-lg bg-red-900/40 text-white border border-red-500/50 px-4 py-3 text-sm w-fit text-center shadow-lg">
-            {error}
-          </div>
-        </div>
-      )}
-
-      {/* Status Tooltip */}
-      <StatusTooltip
-        showStatus={showStatus}
-        uploading={uploading}
-        loading={loading}
-        uploadMsg={uploadMsg}
-        error={error}
-        onClose={() => setShowStatus(false)}
-      />
 
       {/* Chat Input */}
       <ChatInput
