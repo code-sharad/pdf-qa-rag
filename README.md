@@ -21,6 +21,15 @@ A modern, real-time PDF question-answering application built with Next.js, featu
 - **UI Components**: Lucide React icons, React Markdown
 - **Authentication**: Token-based API protection
 
+## Architecture
+
+
+
+**Data Flow:**
+1. **PDF Processing**: Upload → Text extraction → Chunking → Embedding generation
+2. **Query Processing**: User question → Vector search → Context retrieval
+3. **Response Generation**: Context + Question → LLM → Streaming response
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
