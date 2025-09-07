@@ -2,6 +2,8 @@
 
 A modern, real-time PDF question-answering application built with Next.js, featuring AI-powered document analysis, streaming responses, and a sleek black-and-white UI.
 
+## Demo Video
+
 ## Features
 
 - 📄 **PDF Upload & Processing**: Upload PDFs and extract content for analysis
@@ -22,8 +24,7 @@ A modern, real-time PDF question-answering application built with Next.js, featu
 - **Authentication**: Token-based API protection
 
 ## Architecture
-
-
+<img width="1446" height="877" alt="architecture" src="https://github.com/user-attachments/assets/022cb48c-95fd-452c-8054-bac207e583e5" />
 
 **Data Flow:**
 1. **PDF Processing**: Upload → Text extraction → Chunking → Embedding generation
