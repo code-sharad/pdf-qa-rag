@@ -3,7 +3,8 @@
 A modern, real-time PDF question-answering application built with Next.js, featuring AI-powered document analysis, streaming responses, and a sleek black-and-white UI.
 
 ## Demo Video
-[Watch the Demo](https://youtu.be/3OGOdcgW45E)
+![demo](https://github.com/user-attachments/assets/96c564e6-ada8-4d39-9c3b-a3080d26670f)
+
 
 ## Features
 
