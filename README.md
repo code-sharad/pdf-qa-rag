@@ -91,27 +91,6 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 
-## Getting API Keys
-
-### OpenAI API Key
-1. Visit [OpenAI Platform](https://platform.openai.com/)
-2. Sign up or log in to your account
-3. Navigate to API Keys section
-4. Create a new API key
-5. Copy and store it securely
-
-### Pinecone API Key
-1. Sign up at [Pinecone](https://www.pinecone.io/)
-2. Create a new project
-3. Go to API Keys section
-4. Copy your API key and environment details
-
-### Vercel Blob Token
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel login` and authenticate
-3. Run `vercel env add BLOB_READ_WRITE_TOKEN` in your project
-4. Or create it manually in your Vercel dashboard
-
 ## Usage
 
 ### 1. Initial Setup
